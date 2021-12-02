@@ -1060,6 +1060,7 @@ onMounted(() => {
 </script>
 
 <template>
+<div>
   <el-dialog
       title="控件元素快照"
       v-model="dialogImgElement"
@@ -1660,7 +1661,7 @@ onMounted(() => {
           :span="tabPosition == 'left' ? 12 : 24"
           :style="{
             flexBasis: tabPosition == 'left' ?  100 - Number(layoutSplitInfo.left) + '%' : '',
-             maxWidth: 'none'
+             maxWidth: '80%'
           }"
       >
         <el-tabs
@@ -1978,11 +1979,11 @@ onMounted(() => {
               <el-row
                   :gutter="10"
               >
-                <el-col :span="7">
+                <el-col :span="8" id="helloword2">
                   <el-card shadow="hover">
                     <div
                         :style="
-                      'width: 100%;background-image: url(' +
+                      'width: 360px;background-image: url(' +
                       imgUrl +
                       ');background-size:cover;'
                     "
@@ -2022,7 +2023,7 @@ onMounted(() => {
                     </el-table>
                   </el-card>
                 </el-col>
-                <el-col :span="9">
+                <el-col :span="8">
                   <el-card
                       shadow="hover"
                       v-if="isShowTree"
@@ -2343,6 +2344,7 @@ onMounted(() => {
       </el-col>
     </el-row>
   </el-card>
+</div>
 </template>
 <style scoped lang="less">
 .line {
