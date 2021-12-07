@@ -101,6 +101,12 @@ const title = ref('');
 const logcatOutPut = ref([]);
 const uploadLoading = ref(false);
 const location = ref(false);
+const cmdInput = ref('');
+const cmdIsDone = ref(true);
+const logcatFilter = ref({
+  level: 'E',
+  filter: '',
+});
 const element = ref({
   id: null,
   eleName: '',
@@ -696,6 +702,7 @@ onMounted(() => {
 </script>
 
 <template>
+<div>
   <el-dialog
       title="控件元素快照"
       v-model="dialogImgElement"
@@ -1673,6 +1680,7 @@ onMounted(() => {
       </el-col>
     </el-row>
   </el-card>
+</div>
 </template>
 <style scoped lang="less">
 #iOSpressKey {
